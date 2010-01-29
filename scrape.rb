@@ -7,7 +7,7 @@ require "mechanize"
 
 html_start = "<!DOCTYPE html>\n<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /><script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>"
 html_mid = "</head><body>"
-html_end = "</body></html>"
+html_end = "<script type=\"text/javascript\"> var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\"); document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\")); </script> <script type=\"text/javascript\"> try { var pageTracker = _gat._getTracker(\"UA-12732447-1\"); pageTracker._trackPageview(); } catch(err) {}</script></body></html>"
 
 navigation_head = "<link rel='stylesheet' type='text/css' href='css/navigation.css' /><script type='text/javascript' src='js/navigation.js'></script>"
 single_head = "<link rel='stylesheet' type='text/css' href='../../css/single.css' /><script type='text/javascript' src='../../js/single.js'></script>"

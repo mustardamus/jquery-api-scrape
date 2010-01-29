@@ -33,6 +33,7 @@
 <code>$().ready(handler)</code> (this is not recommended)</li>
    <li><code>$(handler)</code></li>
  </ul>
+<p>There is also <code>$(document).bind("ready", handler)</code>. This behaves similarly to the ready method but with one exception: If the ready event has already fired and you try to <code>.bind("ready")</code> the bound handler will not be executed.</p>
 <p>The <code>.ready()</code> method can only be called on a jQuery object matching the current document, so the selector can be omitted.</p>
 <p>The <code>.ready()</code> method is typically used with an anonymous function:</p>
 <pre>$(document).ready(function() {
@@ -72,4 +73,4 @@
 
 				</div>
 <script type='text/javascript' src='../../js/demo.js'></script>
-</body></html>
+<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script> <script type="text/javascript"> try { var pageTracker = _gat._getTracker("UA-12732447-1"); pageTracker._trackPageview(); } catch(err) {}</script></body></html>
