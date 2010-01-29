@@ -11,6 +11,7 @@ html_end = "</body></html>"
 
 navigation_head = "<link rel='stylesheet' type='text/css' href='css/navigation.css' /><script type='text/javascript' src='js/navigation.js'></script>"
 single_head = "<link rel='stylesheet' type='text/css' href='../../css/single.css' /><script type='text/javascript' src='../../js/single.js'></script>"
+single_demo = "<script type='text/javascript' src='../../js/demo.js'></script>"
 
 agent = WWW::Mechanize.new
 mainpage = agent.get("http://api.jquery.com/")
@@ -48,7 +49,7 @@ mainpage.search("#categories > ul > li > a").each do |mainlink|
         singlepage = agent.get(method_link)
         content = singlepage.search(".entry-content")[0]
         
-        File.open("#{path}/index.html", "w") { |f| f.write("#{html_start}\n#{single_head}\n#{html_mid}\n#{content}\n#{html_end}") }
+        File.open("#{path}/index.html", "w") { |f| f.write("#{html_start}\n#{single_head}\n#{html_mid}\n#{content}\n#{single_demo}\n#{html_end}") }
       rescue Exception => e #file or folder exist
         #puts e.message 
       end
