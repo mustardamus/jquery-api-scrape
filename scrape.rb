@@ -1,6 +1,6 @@
 # Screen scraping http://api.jquery.com and building a navigation
 #   Hacked together by Sebastian Senf (c) 20 10
-#   Not the prettiest script, I know. Yet it dows the job. Fork!
+#   Not the prettiest script, I know. Yet it does the job. Fork!
 
 require "rubygems"
 require "mechanize"
@@ -10,7 +10,7 @@ html_mid = "</head><body>"
 html_end = "</body></html>"
 
 navigation_head = "<link rel='stylesheet' type='text/css' href='css/navigation.css' /><script type='text/javascript' src='js/navigation.js'></script>"
-single_head = "<link rel='stylesheet' type='text/css' href='css/single.css' /><script type='text/javascript' src='js/single.js'></script>"
+single_head = "<link rel='stylesheet' type='text/css' href='../../css/single.css' /><script type='text/javascript' src='../../js/single.js'></script>"
 
 agent = WWW::Mechanize.new
 mainpage = agent.get("http://api.jquery.com/")
