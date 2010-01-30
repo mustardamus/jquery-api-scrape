@@ -5,13 +5,8 @@
 require "rubygems"
 require "mechanize"
 
-html_start = "<!DOCTYPE html>\n<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /><script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>"
-html_mid = "</head><body>"
-html_end = "<script type=\"text/javascript\"> var gaJsHost = ((\"https:\" == document.location.protocol) ? \"https://ssl.\" : \"http://www.\"); document.write(unescape(\"%3Cscript src='\" + gaJsHost + \"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E\")); </script> <script type=\"text/javascript\"> try { var pageTracker = _gat._getTracker(\"UA-12732447-1\"); pageTracker._trackPageview(); } catch(err) {}</script></body></html>"
-
-navigation_head = "<link rel='stylesheet' type='text/css' href='css/navigation.css' /><script type='text/javascript' src='js/navigation.js'></script>"
-single_head = "<link rel='stylesheet' type='text/css' href='../../css/single.css' /><script type='text/javascript' src='../../js/single.js'></script>"
-single_demo = "<script type='text/javascript' src='../../js/demo.js'></script>"
+html_start = "<!DOCTYPE html>\n<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>"
+html_end = "</body></html>"
 
 agent = WWW::Mechanize.new
 mainpage = agent.get("http://api.jquery.com/")
@@ -23,7 +18,7 @@ system("rm -r #{version}") #I know... :)
 Dir.mkdir version
 Dir.mkdir "#{version}/docs"
 
-navigation = "<div id='search'><input type='text' id='search-field' /></div><ul>"
+navigation = "<div id='search'><input type='search' placeholder='Search' autosave='searchdoc' results='10' id='search-field' autocomplete='off' /></div><ul id='static-list'>"
 
 mainpage.search("#categories > ul > li > a").each do |mainlink|
   main_name = mainlink.text
@@ -31,7 +26,7 @@ mainpage.search("#categories > ul > li > a").each do |mainlink|
   unless main_name == "All" || main_name == "Version"
     puts main_name
 
-    navigation << "<li><a href='##{main_name.downcase}'>#{main_name}</a><ul>"
+    navigation << "<li class='category'><span>#{main_name}</span><ul>"
     
     subpage = agent.get(mainlink["href"])
     
@@ -49,12 +44,12 @@ mainpage.search("#categories > ul > li > a").each do |mainlink|
         singlepage = agent.get(method_link)
         content = singlepage.search(".entry-content")[0]
         
-        File.open("#{path}/index.html", "w") { |f| f.write("#{html_start}\n#{single_head}\n#{html_mid}\n#{content}\n#{single_demo}\n#{html_end}") }
+        File.open("#{path}/index.html", "w") { |f| f.write("#{html_start}\n#{content}\n\n#{html_end}") }
       rescue Exception => e #file or folder exist
         #puts e.message 
       end
       
-      navigation << "<li><a href='docs/#{method_fold}/index.html' target='single'><span class='searchable'>#{method_name}</span><span class='desc'>#{method_desc}</span></a></li>"
+      navigation << "<li class='sub'><a href='docs/#{method_fold}/index.html'><span class='searchable'>#{method_name}</span><span class='desc'>#{method_desc}</span></a></li>"
       puts "-- #{method_name}"
     end
     
@@ -66,4 +61,4 @@ end
 
 navigation << "</ul>"
 
-File.open("#{version}/navigation.html", "w") { |f| f.write("#{html_start}\n#{navigation_head}\n#{html_mid}#{navigation}\n#{html_end}") }
+File.open("#{version}/navigation.html", "w") { |f| f.write("#{html_start}\n#{navigation}\n#{html_end}") }

@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /><script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js'></script>
-<link rel='stylesheet' type='text/css' href='../../css/single.css' /><script type='text/javascript' src='../../js/single.js'></script>
-</head><body>
+<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
 <div class="entry-content">
         <div class="entry-title roundTop">
 				<h1 class="jq-clearfix">jQuery.post()</h1>
@@ -12,16 +10,16 @@
 </div>
 <div class="entry method" id="jQuery.post1">
 <h2 class="jq-clearfix roundTop section-title">
-<span class="name">jQuery.post( url, [ data ], [ success(data, textStatus) ], [ dataType ] )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#XMLHttpRequest">XMLHttpRequest</a></span>
+<span class="name">jQuery.post( url, [ data ], [ success(data, textStatus, XMLHttpRequest) ], [ dataType ] )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#XMLHttpRequest">XMLHttpRequest</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
 <p class="desc"><strong>Description: </strong>Load data from the server using a HTTP POST request.</p>
-<ul class="signatures"><li class="signature" id="jQuery.post-url-data-successdata, textStatus-dataType">
+<ul class="signatures"><li class="signature" id="jQuery.post-url-data-successdata, textStatus, XMLHttpRequest-dataType">
 <h4 class="name">
-<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.post( url, [ data ], [ success(data, textStatus) ], [ dataType ] )</h4>
+<span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>jQuery.post( url, [ data ], [ success(data, textStatus, XMLHttpRequest) ], [ dataType ] )</h4>
 <p class="arguement"><strong>url</strong>A string containing the URL to which the request is sent.</p>
 <p class="arguement"><strong>data</strong>A map or string that is sent to the server with the request.</p>
-<p class="arguement"><strong>success(data, textStatus)</strong>A callback function that is executed if the request succeeds.</p>
+<p class="arguement"><strong>success(data, textStatus, XMLHttpRequest)</strong>A callback function that is executed if the request succeeds.</p>
 <p class="arguement"><strong>dataType</strong>The type of data expected from the server.</p>
 </li></ul>
 <div class="longdesc">
@@ -34,15 +32,15 @@
   dataType: <em>dataType</em>
 });
 </pre>
-<p>The callback is passed the returned data, which will be an XML root element or a text string depending on the MIME type of the response.</p>
+<p>The <code>success</code> callback function is passed the returned data, which will be an XML root element or a text string depending on the MIME type of the response. It is also passed the text status of the response.</p>
+<p>As of jQuery 1.4, the <code>success</code> callback function is also passed the XMLHttpRequest object.</p>
 <p>Most implementations will specify a success handler:</p>
 <pre>$.post('ajax/test.html', function(data) {
   $('.result').html(data);
-  $.print('Load was performed.');
 });
 </pre>
 <p>This example fetches the requested HTML snippet and inserts it on the page.</p>
-<p>Pages fetched with POST are never cached, so the <code>cache</code> and <code>ifModified</code> options have no effect on these requests.</p>
+<p>Pages fetched with <code>POST</code> are never cached, so the <code>cache</code> and <code>ifModified</code> options in <code><a href="/jQuery.ajaxSetup">jQuery.ajaxSetup()</a></code> have no effect on these requests.</p>
 </div>
 <h3>Examples:</h3>
 <div id="entry-examples" class="entry-examples">
@@ -105,5 +103,5 @@
 </div>
 
 				</div>
-<script type='text/javascript' src='../../js/demo.js'></script>
-<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E")); </script> <script type="text/javascript"> try { var pageTracker = _gat._getTracker("UA-12732447-1"); pageTracker._trackPageview(); } catch(err) {}</script></body></html>
+
+</body></html>
