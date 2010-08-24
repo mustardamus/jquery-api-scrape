@@ -58,7 +58,7 @@
 <p>The result is a jQuery set that contains a paragraph and a div (in that order).</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Inserts some HTML before all paragraphs.</span>
 </h4>
@@ -66,11 +66,12 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;p { background:yellow; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt; is what I said...&lt;/p&gt;
 &lt;script&gt;$("p").before("&lt;b&gt;Hello&lt;/b&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -83,11 +84,12 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;p { background:yellow; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt; is what I said...&lt;/p&gt;
 &lt;script&gt;$("p").before( document.createTextNode("Hello") );&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -100,11 +102,12 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;p { background:yellow; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt; is what I said...&lt;/p&gt;&lt;b&gt;Hello&lt;/b&gt;
 &lt;script&gt;$("p").before( $("b") );&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

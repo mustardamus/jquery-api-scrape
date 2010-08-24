@@ -34,24 +34,19 @@
 <blockquote>
 <p>This event may not be correctly fired when the page is served locally. Since <code>error</code> relies on normal HTTP status codes, it will generally not be triggered if the URL uses the <code>file:</code> protocol.</p>
 </blockquote>
+<p>Note: A jQuery error event handler should not be attached to the window object. The browser fires the window's error event when a script error occurs. However, the window error event receives different arguments and has different return value requirements than conventional event handlers.
+</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
-<h4>Example: <span class="desc">To keep a server-side log of JavaScript errors, you might want to:</span>
-</h4>
-<pre><code class="example">$(window).error(function(msg, url, line){
-  jQuery.post("js_error_log.php", { msg: msg, url: url, line: line });
-});</code></pre>
-</div>
-<div id="example-1">
 <h4>Example: <span class="desc">To hide JavaScript errors from the user, you can try:</span>
 </h4>
 <pre><code class="example">$(window).error(function(){
   return true;
 });</code></pre>
 </div>
-<div id="example-2">
+<div id="example-1">
 <h4>Example: <span class="desc">To hide the "broken image" icons for your IE users, you can try:</span>
 </h4>
 <pre><code class="example">$("img").error(function(){

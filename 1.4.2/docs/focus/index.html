@@ -53,7 +53,7 @@
 <blockquote><p>Triggering the focus on hidden elements causes an error in Internet Explorer. Take care to only call <code>.focus()</code> without parameters on elements that are visible.</p></blockquote>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Fire focus.</span>
 </h4>
@@ -61,7 +61,7 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;span {display:none;}&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;&lt;input type="text" /&gt; &lt;span&gt;focus fire&lt;/span&gt;&lt;/p&gt;
@@ -72,6 +72,7 @@
          $(this).next("span").css('display','inline').fadeOut(1000);
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

@@ -59,7 +59,7 @@
 &lt;/div&gt;</pre>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Selects all paragraphs and wraps a bold tag around each of its contents.</span>
 </h4>
@@ -67,7 +67,7 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;p { background:#bbf; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -75,6 +75,7 @@
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").wrapInner("&lt;b&gt;&lt;/b&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -91,11 +92,12 @@
   div { border:2px green solid; margin:2px; padding:2px; }
   p { background:yellow; margin:2px; padding:2px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	Plain old text, or is it?
 &lt;script&gt;$("body").wrapInner("&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;em&gt;&lt;b&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -108,7 +110,7 @@
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;p { background:#9f9; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -116,6 +118,7 @@
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").wrapInner(document.createElement("b"));&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -132,13 +135,14 @@
   p { background:#9f9; }
   .red { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").wrapInner($("&lt;span class='red'&gt;&lt;/span&gt;"));&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

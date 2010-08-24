@@ -41,15 +41,17 @@
     <img src="/images/0042_06_41.png" alt=""><img src="/images/0042_06_42.png" alt=""><img src="/images/0042_06_43.png" alt=""><img src="/images/0042_06_44.png" alt=""></p>
 <p>With <code>duration</code> set to <code>0</code>, this method just changes the <code>opacity</code> CSS property, so <code>.fadeTo(0, opacity)</code> is the same as <code>.css('opacity', opacity)</code>.</p>
 </div>
+<h3 id="notes-0">Additional Notes:</h3>
+<div class="longdesc"><ul><li>All jQuery effects, including <code>.fadeTo()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Animates first paragraph to fade to an opacity of 0.33 (33%, about one third visible), completing the animation within 600 milliseconds.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;
@@ -64,6 +66,7 @@ $("p:first").click(function () {
 $(this).fadeTo("slow", 0.33);
 });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -82,7 +85,7 @@ div#one { top:0; left:0; background:#f00; }
 div#two { top:20px; left:20px; background:#0f0; }
 div#three { top:40px; left:40px; background:#00f; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;And this is the library that John built...&lt;/p&gt;
@@ -95,6 +98,7 @@ $("div").click(function () {
 $(this).fadeTo("fast", Math.random());
 });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -112,7 +116,7 @@ position:absolute; padding-top:8px; }
 p { background:#fcc; text-align:center; }
 div { background:blue; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Wrong&lt;/p&gt;
@@ -146,6 +150,7 @@ $("div").each(function (n) {
     });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

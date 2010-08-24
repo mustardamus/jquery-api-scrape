@@ -38,7 +38,7 @@
 <p>The original element is not included among the siblings, which is important to remember when we wish to find all elements at a particular level of the DOM tree.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Find the unique siblings of all yellow li elements in the 3 lists (including other yellow li elements if appropriate).</span>
 </h4>
@@ -51,7 +51,7 @@
       font-weight:bolder; }
   .hilite { background:yellow; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -83,6 +83,7 @@
                           .length;
     $("b").text(len);
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -94,7 +95,7 @@
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;&lt;span&gt;Hello&lt;/span&gt;&lt;/div&gt;
@@ -102,6 +103,7 @@
   &lt;p class="selected"&gt;Hello Again&lt;/p&gt;
   &lt;p&gt;And Again&lt;/p&gt;
 &lt;script&gt;$("p").siblings(".selected").css("background", "yellow");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

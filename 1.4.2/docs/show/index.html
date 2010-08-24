@@ -48,7 +48,7 @@ $('#clickme').click(function() {
   <img src="/images/0042_06_01.png" alt=""><img src="/images/0042_06_02.png" alt=""><img src="/images/0042_06_03.png" alt=""><img src="/images/0042_06_04.png" alt=""></p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Animates all hidden paragraphs to show slowly, completing the animation within 600 milliseconds.</span>
 </h4>
@@ -58,7 +58,7 @@ $('#clickme').click(function() {
   &lt;style&gt;
       p { background:yellow; }
       &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button&gt;Show it&lt;/button&gt;
@@ -69,6 +69,7 @@ $('#clickme').click(function() {
     $("p").show("slow");
     });
     &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -84,7 +85,7 @@ $('#clickme').click(function() {
   div { background:#def3ca; margin:3px; width:80px; 
   display:none; float:left; text-align:center; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -107,13 +108,14 @@ $("#hidr").click(function () {
 });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
 <div id="example-2">
-<h4>Example: <span class="desc">Animates all span and input elements to show normally. Once the animation is done, it changes the text.</span>
+<h4>Example: <span class="desc">Shows all span and input elements with an animation. Once the animation is done, it changes the text.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -123,7 +125,7 @@ $("#hidr").click(function () {
   div { display:none; }
   p { font-weight:bold; background-color:#fcd; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button&gt;Do it!&lt;/button&gt;
@@ -137,7 +139,7 @@ $("#hidr").click(function () {
   
 &lt;script&gt;
 function doIt() {
-  $("span,div").show("normal");
+  $("span,div").show("slow");
 }
 /* can pass in function name */
 $("button").click(doIt);
@@ -148,11 +150,12 @@ $("form").submit(function () {
       $(this).text("Ok, DONE! (now showing)");
     });
   }
-  $("span,div").hide("normal");
+  $("span,div").hide("fast");
   /* to stop the submit */
   return false; 
 });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

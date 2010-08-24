@@ -40,21 +40,21 @@
 With the element initially shown, we can hide it slowly:
 $('#clickme').click(function() {
   $('#book').hide('slow', function() {
-    $.print('Animation complete.');
+    alert('Animation complete.');
   });
 });</pre>
 <p class="image four-across"> 
   <img src="/images/0042_06_05.png" alt=""><img src="/images/0042_06_06.png" alt=""><img src="/images/0042_06_07.png" alt=""><img src="/images/0042_06_08.png" alt=""></p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Hides all paragraphs then the link on click.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -68,6 +68,7 @@ $('#clickme').click(function() {
       return true;
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -82,7 +83,7 @@ $('#clickme').click(function() {
   &lt;style&gt;
   p { background:#dad; font-weight:bold; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button&gt;Hide 'em&lt;/button&gt;
@@ -94,6 +95,7 @@ $('#clickme').click(function() {
       $("p").hide("slow");
     });    
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -108,7 +110,7 @@ $('#clickme').click(function() {
   &lt;style&gt;
   span { background:#def3ca; padding:3px; float:left; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="hidr"&gt;Hide&lt;/button&gt;
@@ -132,6 +134,7 @@ $('#clickme').click(function() {
     });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -147,7 +150,7 @@ $('#clickme').click(function() {
   div { background:#ece023; width:30px; 
         height:40px; margin:2px; float:left; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -161,6 +164,7 @@ $('#clickme').click(function() {
       });
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

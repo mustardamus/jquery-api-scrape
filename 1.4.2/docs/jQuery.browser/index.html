@@ -39,7 +39,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
 <p>Because <code>$.browser</code> uses <code>navigator.userAgent</code> to determine the platform, it is vulnerable to spoofing by the user or misrepresentation by the browser itself. It is always best to avoid browser-specific code entirely where possible. The <code>$.support</code> property is available for detection of support for particular features rather than relying on <code>$.browser</code>.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Show the browser info.</span>
 </h4>
@@ -51,7 +51,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
   div { color:blue; margin-left:20px; font-size:14px; }
   span { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Browser info:&lt;/p&gt;
@@ -60,6 +60,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
       $("&lt;div&gt;" + i + " : &lt;span&gt;" + val + "&lt;/span&gt;")
                 .appendTo(document.body);
     });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -118,8 +119,8 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
 <p>Note that IE8 claims to be 7 in Compatibility View.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
-<div id="example-0">
+<div class="entry-examples" id="entry-examples-1">
+<div id="example-1-0">
 <h4>Example: <span class="desc">Returns the browser version.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -129,7 +130,7 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
   p { color:blue; margin:20px; }
   span { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;
@@ -139,19 +140,20 @@ The <code>$.browser</code> property is deprecated in jQuery 1.3, but there are n
     $("p").html("The browser version is: &lt;span&gt;" +
                 jQuery.browser.version + "&lt;/span&gt;");
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-1">
+<div id="example-1-1">
 <h4>Example: <span class="desc">Alerts the version of IE that is being used</span>
 </h4>
 <pre><code class="example">if ( $.browser.msie ) {
   alert( $.browser.version );
 }</code></pre>
 </div>
-<div id="example-2">
+<div id="example-1-2">
 <h4>Example: <span class="desc">Often you only care about the "major number," the whole number. This can be accomplished with JavaScript's built-in parseInt() function:</span>
 </h4>
 <pre><code class="example">

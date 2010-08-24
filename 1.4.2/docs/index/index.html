@@ -76,7 +76,7 @@ alert('Index: ' + listItem.index('li'));
 <p><span class="output">Index: 1</span></p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">On click, returns the index (based zero) of that div in the page.</span>
 </h4>
@@ -87,7 +87,7 @@ alert('Index: ' + listItem.index('li'));
 div { background:yellow; margin:5px; }
 span { color:red; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;span&gt;Click a div!&lt;/span&gt;
@@ -101,6 +101,7 @@ $("div").click(function () {
   $("span").text("That was div index #" + index);
 });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -113,7 +114,7 @@ $("div").click(function () {
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { font-weight: bold; color: #090; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -124,6 +125,7 @@ $("div").click(function () {
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var listItem = $('#bar');
     $('div').html( 'Index: ' + $('li').index(listItem) );&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -136,7 +138,7 @@ $("div").click(function () {
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { font-weight: bold; color: #090; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -148,6 +150,7 @@ $("div").click(function () {
 &lt;script&gt;var listItems = $('li:gt(0)');
 $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -160,7 +163,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { font-weight: bold; color: #090; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -170,6 +173,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;/ul&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;$('div').html('Index: ' +  $('#bar').index('li') );&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -182,7 +186,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { font-weight: bold; color: #090; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -193,6 +197,7 @@ $('div').html( 'Index: ' + $('li').index(listItems) );
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var barIndex = $('#bar').index();
 $('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -205,7 +210,7 @@ $('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;div { font-weight: bold; color: #090; }&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -216,6 +221,7 @@ $('div').html( 'Index: ' +  barIndex );&lt;/script&gt;
 &lt;div&gt;&lt;/div&gt;
 &lt;script&gt;var foobar = $("li").index( $('#foobar') );
 $('div').html('Index: ' + foobar);&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

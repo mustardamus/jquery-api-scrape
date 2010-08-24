@@ -13,13 +13,16 @@
 <span class="name">event.stopImmediatePropagation()</span> <span class="returns"></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong> Keeps the rest of the handlers from being executed. 
+<p class="desc"><strong>Description: </strong> Keeps the rest of the handlers from being executed and prevents the event from bubbling up the DOM tree
   </p>
 <ul class="signatures"><li class="signature" id="event.stopImmediatePropagation"><h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.3/">1.3</a></span>event.stopImmediatePropagation()</h4></li></ul>
-<div class="longdesc"><p>This method also stops the bubbling by implicitly calling <code>event.stopPropagation()</code>. Use <code>event.isImmediatePropagationStopped()</code> to know whether this method was ever called (on that event object).</p></div>
+<div class="longdesc">
+<p>In addition to keeping any additional handlers on an element from being executed, this method also stops the bubbling by implicitly calling <code>event.stopPropagation()</code>. To simply prevent the event from bubbling to ancestor elements but allow other event handlers to execute on the same element, we can use <code><a href="http://api.jquery.com/event.stopPropagation">event.stopPropagation()</a></code> instead.</p>
+<p>Use <code><a href="http://api.jquery.com/event.isImmediatePropagationStopped">event.isImmediatePropagationStopped()</a></code> to know whether this method was ever called (on that event object).</p>
+</div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Prevents other event handlers from being called.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -28,7 +31,7 @@
 p { height: 30px; width: 150px; background-color: #ccf; }
 div {height: 30px; width: 150px; background-color: #cfc; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;paragraph&lt;/p&gt;
@@ -45,6 +48,7 @@ $("div").click(function(event) {
   // This function will be executed
     $(this).css("background-color", "#f00");
 });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

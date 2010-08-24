@@ -14,7 +14,7 @@
 </h2>
 <div class="jq-box roundBottom entry-details">
 <p class="desc"><strong>Description: </strong>Register a handler to be called when Ajax requests complete with an error. This is an Ajax Event.</p>
-<ul class="signatures"><li class="signature" id="ajaxError-handlerevent, XMLHttpRequest, ajaxOptions, thrownError">
+<ul class="signatures"><li class="signature" id="ajaxError-handlerevent-XMLHttpRequest-ajaxOptions-thrownError">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.ajaxError( handler(event, XMLHttpRequest, ajaxOptions, thrownError) )</h4>
 <p class="arguement"><strong>handler(event, XMLHttpRequest, ajaxOptions, thrownError)</strong>The function to be invoked.</p>
@@ -43,7 +43,7 @@
 });</pre>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Show a message when an Ajax request fails.</span></h4>
 <pre><code class="example">$("#msg").ajaxError(function(event, request, settings){
    $(this).append("&lt;li&gt;Error requesting page " + settings.url + "&lt;/li&gt;");

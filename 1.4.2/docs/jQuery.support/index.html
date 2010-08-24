@@ -48,9 +48,6 @@
 <code>noCloneEvent</code>: Is equal to true  if cloned DOM elements are created without event handlers (that is, if the event handlers on the source element are not cloned). (It is currently false in IE). <div><a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-Registration-interfaces-h3">DOM l2 spec</a></div>
 </li>
 <li>
-<code>objectAll</code>: Is equal to true  if the <code>.getElementsByTagName()</code> method returns all descendant elements when called with a wildcard argument ('*'). (It is currently false in IE 7 and IE 8). <div><a href="http://www.w3.org/TR/WD-DOM/level-one-core.html#ID-745549614">DOM l1 spec</a></div>
-</li>
-<li>
 <code>opacity</code>: Is equal to true if a browser can properly interpret the opacity style property. (It is currently false in IE, it uses alpha filters instead). <div><a href="http://www.w3.org/TR/css3-color/#transparency">CSS3 spec</a></div>
 </li>
 <li>
@@ -65,7 +62,7 @@
 </ul>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Returns the box model for the iframe.</span>
 </h4>
@@ -76,7 +73,7 @@
   p { color:blue; margin:20px; }
   span { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;
@@ -87,6 +84,7 @@
                 jQuery.support.boxModel + "&lt;/span&gt;");
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

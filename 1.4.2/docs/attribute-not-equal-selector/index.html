@@ -23,12 +23,12 @@
 <p class="desc"><strong>Description: </strong>Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value.</p>
 <div class="longdesc"><p>This selector is equivalent to <code>:not([attr=value])</code>.</p></div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Finds all inputs that don't have the name 'newsletter' and appends text to the span next to it.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;
@@ -48,6 +48,7 @@
     &lt;span&gt;name is accept&lt;/span&gt;
   &lt;/div&gt;
 &lt;script&gt;$("input[name!=newsletter]").next().append("&lt;b&gt;; not newsletter&lt;/b&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

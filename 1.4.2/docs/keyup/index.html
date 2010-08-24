@@ -49,7 +49,7 @@
 <p>To determine which key was pressed, we can examine the event object that is passed to the handler function. While browsers use differing attributes to store this information, jQuery normalizes the <code>.which</code> attribute so we can reliably use it to retrieve the key code. This code corresponds to a key on the keyboard, including codes for special keys such as arrows. For catching actual text entry, <code>.keypress()</code> may be a better choice.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Show the event object for the keyup handler when a key is released in the input.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -68,7 +68,7 @@ input { display: block; margin-bottom: .25em; }
 }
 
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;form&gt;
@@ -96,6 +96,7 @@ $('#target').keyup(function(event) {
 $('#other').click(function() {
   $('#target').keyup();
 });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

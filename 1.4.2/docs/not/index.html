@@ -66,7 +66,7 @@ $('li').not(document.getElementById('notli'))
 <p>As of jQuery 1.4, the <code>.not()</code> method can take a function as its argument in the same way that <code>.filter()</code> does. Elements for which the function returns <code>true</code> are excluded from the filtered set; all other elements are included.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Adds a border to divs that are not green or blue.</span>
 </h4>
@@ -80,7 +80,7 @@ $('li').not(document.getElementById('notli'))
   .gray { background:#ccc; }
   #blueone { background:#99f; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -96,6 +96,7 @@ $('li').not(document.getElementById('notli'))
             .css("border-color", "red");
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

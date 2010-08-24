@@ -23,12 +23,12 @@
 <p class="desc"><strong>Description: </strong>Selects elements that have the specified attribute with a value beginning exactly with a given string.</p>
 <div class="longdesc"><p>This selector can be useful for identifying elements in pages produced by server-side frameworks that produce HTML with systematic element IDs. However it will be slower than using a class selector so leverage classes, if you can, to group like elements.</p></div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Finds all inputs with an attribute name that starts with 'news' and puts text in them.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;input name="newsletter" /&gt;
@@ -36,6 +36,7 @@
   &lt;input name="milkman" /&gt;
   &lt;input name="newsboy" /&gt;
 &lt;script&gt;$("input[name^='news']").val("news here!");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

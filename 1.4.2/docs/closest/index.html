@@ -31,7 +31,7 @@
 <span class="name">.closest( selector )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong>Get the first element that matches the selector, beginning at the current element and progressing up through the DOM tree.</p>
+<p class="desc"><strong>Description: </strong>Get the first ancestor element that matches the selector, beginning at the current element and progressing up through the DOM tree.</p>
 <ul class="signatures">
 <li class="signature" id="closest-selector">
 <h4 class="name">
@@ -106,7 +106,7 @@ $('li.item-a').closest('#one', listItemII)
 <p>This will change the color of the level-2 <code>&lt;ul&gt;</code>, because it is both the first <code>&lt;ul&gt;</code> ancestor of list item A and a descendant of list item II. It will not change the color of the level-1 <code>&lt;ul&gt;</code>, however, because it is not a descendant of list item II.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Show how event delegation can be done with closest.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -115,7 +115,7 @@ $('li.item-a').closest('#one', listItemII)
   li { margin: 3px; padding: 3px; background: #EEEEEE; }
   li.hilight { background: yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;
@@ -128,6 +128,7 @@ $('li.item-a').closest('#one', listItemII)
       $(e.target).closest("li").toggleClass("hilight");
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -144,25 +145,26 @@ $('li.item-a').closest('#one', listItemII)
 <ul class="signatures"><li class="signature" id="closest-selectors-context">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.closest( selectors, [ context ] )</h4>
-<p class="arguement"><strong>selectors</strong>An array of string containing a selector expression to match elements against (can also be a jQuery object).</p>
+<p class="arguement"><strong>selectors</strong>An array or string containing a selector expression to match elements against (can also be a jQuery object).</p>
 <p class="arguement"><strong>context</strong>A DOM element within which a matching element may be found. If no context is passed in then the context of the jQuery set will be used instead.</p>
 </li></ul>
 <div class="longdesc"><p>This method is primarily meant to be used internally or by plugin authors.</p></div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
 <h4><span class="desc">Show how event delegation can be done with closest.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
   &lt;style&gt;&lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;
 &lt;script&gt;var close = $("li:first").closest(["ul", "body"]);
-$.each(close, function(i){
+        $.each(close, function(i){
   $("li").eq(i).html( this.selector + ": " + this.elem.nodeName );
 });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

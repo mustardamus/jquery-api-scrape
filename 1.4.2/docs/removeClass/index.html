@@ -20,7 +20,7 @@
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.removeClass( [ className ] )</h4>
 <p class="arguement"><strong>className</strong>A class name to be removed from the class attribute of each matched element.</p>
 </li>
-<li class="signature" id="removeClass-functionindex, class">
+<li class="signature" id="removeClass-functionindex-class">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.removeClass( function(index, class) )</h4>
 <p class="arguement"><strong>function(index, class)</strong>A function returning one or more space-separated class names to be removed. Receives the index position of the element in the set and the old class value as arguments.</p>
@@ -43,7 +43,7 @@
 <p>This example removes the class name of the penultimate <code>&lt;li&gt;</code> from the last <code>&lt;li&gt;</code>.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Remove the class 'blue' from the matched elements.</span>
 </h4>
@@ -57,7 +57,7 @@
   .under { text-decoration:underline; }
   .highlight { background:yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p class="blue under"&gt;Hello&lt;/p&gt;
@@ -66,6 +66,7 @@
 
   &lt;p class="blue under"&gt;Goodbye&lt;/p&gt;
 &lt;script&gt;$("p:even").removeClass("blue");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -83,7 +84,7 @@
   .under { text-decoration:underline; }
   .highlight { background:yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p class="blue under"&gt;Hello&lt;/p&gt;
@@ -92,6 +93,7 @@
   &lt;p class="blue under"&gt;then&lt;/p&gt;
   &lt;p class="blue under"&gt;Goodbye&lt;/p&gt;
 &lt;script&gt;$("p:odd").removeClass("blue under");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -110,7 +112,7 @@
   .under { text-decoration:underline; }
   .highlight { background:yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p class="blue under"&gt;Hello&lt;/p&gt;
@@ -119,6 +121,7 @@
 
   &lt;p class="blue under"&gt;Goodbye&lt;/p&gt;
 &lt;script&gt;$("p:eq(1)").removeClass();&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

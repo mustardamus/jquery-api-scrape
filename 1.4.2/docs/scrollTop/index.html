@@ -32,7 +32,7 @@
 <span class="versionAdded">version added: <a href="/category/version/1.2.6/">1.2.6</a></span>.scrollTop()</h4></li></ul>
 <div class="longdesc"><p>The vertical scroll position is the same as the number of pixels that are hidden from view above the scrollable area. If the scroll bar is at the very top, or if the element is not scrollable, this number will be <code>0</code>.</p></div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Get the scrollTop of a paragraph.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -40,7 +40,7 @@
   &lt;style&gt;
   p { margin:10px;padding:5px;border:2px solid #666; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;&lt;p&gt;&lt;/p&gt;
@@ -48,6 +48,7 @@
 $("p:last").text( "scrollTop:" + p.scrollTop() );
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -68,7 +69,7 @@ $("p:last").text( "scrollTop:" + p.scrollTop() );
 </li></ul>
 <div class="longdesc"><p>The vertical scroll position is the same as the number of pixels that are hidden from view above the scrollable area. Setting the <code>scrollTop</code> positions the vertical scroll of each matched element.</p></div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
 <h4><span class="desc">Set the scrollTop of a div.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -86,12 +87,13 @@ overflow:auto;
 }
   p { margin:10px;padding:5px;border:2px solid #666;width:1000px;height:1000px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div class="demo"&gt;&lt;h1&gt;lalala&lt;/h1&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;
 &lt;script&gt;$("div.demo").scrollTop(300);
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

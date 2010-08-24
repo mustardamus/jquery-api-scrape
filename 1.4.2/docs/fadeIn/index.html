@@ -38,8 +38,10 @@
 <p class="image four-across">
       <img src="/images/0042_06_33.png" alt=""><img src="/images/0042_06_34.png" alt=""><img src="/images/0042_06_35.png" alt=""><img src="/images/0042_06_36.png" alt=""></p>
 </div>
+<h3 id="notes-0">Additional Notes:</h3>
+<div class="longdesc"><ul><li>All jQuery effects, including <code>.fadeIn()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Animates hidden divs to fade in one by one, completing each animation within 600 milliseconds.</span>
 </h4>
@@ -54,7 +56,7 @@
       div#two { background:#0f0; }
       div#three { background:#00f; }
     &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;span&gt;Click here...&lt;/span&gt;
@@ -67,6 +69,7 @@
         $("div:hidden:first").fadeIn("slow");
       });
     &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -87,7 +90,7 @@
         top:0; left:0; display:none; }
         span { display:none; }
       &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;
@@ -107,6 +110,7 @@
         }); 
 
       &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

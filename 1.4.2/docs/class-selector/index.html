@@ -21,7 +21,7 @@
 <p class="desc"><strong>Description: </strong>Selects all elements with the given class. </p>
 <div class="longdesc"><p>For class selectors, jQuery uses JavaScript's native <code>getElementsByClassName()</code> function if the browser supports it.</p></div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Finds the element with the class "myClass".</span>
 </h4>
@@ -38,7 +38,7 @@
     background-color: #EEEEEE;
   }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div class="notMe"&gt;div class="notMe"&lt;/div&gt;
@@ -46,6 +46,7 @@
   &lt;div class="myClass"&gt;div class="myClass"&lt;/div&gt;
   &lt;span class="myClass"&gt;span class="myClass"&lt;/span&gt;
 &lt;script&gt;$(".myClass").css("border","3px solid red");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -67,14 +68,15 @@
     background-color: #EEEEEE;
   }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;div class=".myclass"&gt;div class="notMe"&lt;/div&gt;
+	&lt;div class="myclass"&gt;div class="notMe"&lt;/div&gt;
 
   &lt;div class="myclass otherclass"&gt;div class="myClass"&lt;/div&gt;
   &lt;span class="myclass otherclass"&gt;span class="myClass"&lt;/span&gt;
 &lt;script&gt;$(".myclass.otherclass").css("border","13px solid red");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

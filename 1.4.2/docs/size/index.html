@@ -27,10 +27,10 @@
 <pre>alert('Size: ' + $('li').size());</pre>
 <p>This will alert the count of items:</p>
 <p><span class="output">Size: 2</span></p>
-<p>The <a href="/length/">.length</a> property is a slightly faster way to get this information.</p>
+<p><strong>You should use the <a href="/length/">.length</a> property instead, which is slightly faster.</strong></p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Count the divs. Click to add more.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -39,7 +39,7 @@
  div { width:50px; height:30px; margin:5px; float:left; background:blue; }
  span { color:red; }
  &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;span&gt;&lt;/span&gt;
@@ -48,6 +48,7 @@
 &lt;script&gt;$(document.body).click(function () { $(document.body).append($("&lt;div&gt;"));
 var n = $("div").size();
 $("span").text("There are " + n + " divs." + "Click to add more.");}).click(); // trigger the click to start&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

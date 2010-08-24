@@ -59,7 +59,7 @@
 &lt;/div&gt;</pre>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Wrap a new div around all of the paragraphs.</span>
 </h4>
@@ -71,13 +71,14 @@
   div { border: 2px solid blue; }
   p { background:yellow; margin:4px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").wrap("&lt;div&gt;&lt;/div&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -95,13 +96,14 @@
   p { background:yellow; margin:2px; padding:2px; }
   strong { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;span&gt;Span Text&lt;/span&gt;
   &lt;strong&gt;What about me?&lt;/strong&gt;
   &lt;span&gt;Another One&lt;/span&gt;
 &lt;script&gt;$("span").wrap("&lt;div&gt;&lt;div&gt;&lt;p&gt;&lt;em&gt;&lt;b&gt;&lt;/b&gt;&lt;/em&gt;&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -118,13 +120,14 @@
   div { border: 2px solid blue; }
   p { background:yellow; margin:4px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").wrap(document.createElement("div"));&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -142,7 +145,7 @@
   .doublediv { border-color:red; }
   p { background:yellow; margin:4px; font-size:14px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -150,6 +153,7 @@
   &lt;p&gt;World&lt;/p&gt;
   &lt;div class="doublediv"&gt;&lt;div&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;script&gt;$("p").wrap($(".doublediv"));&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

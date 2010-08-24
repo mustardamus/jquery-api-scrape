@@ -13,7 +13,7 @@
 <span class="name">.ajaxStop( handler() )</span> <span class="returns">Returns: <a class="return" href="http://docs.jquery.com/Types#jQuery">jQuery</a></span>
 </h2>
 <div class="jq-box roundBottom entry-details">
-<p class="desc"><strong>Description: </strong></p>
+<p class="desc"><strong>Description: </strong>Register a handler to be called when all Ajax requests have completed. This is an Ajax Event.</p>
 <ul class="signatures"><li class="signature" id="ajaxStop-handler">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.ajaxStop( handler() )</h4>
@@ -37,7 +37,7 @@
 <p>Because <code>.ajaxStop()</code> is implemented as a method of jQuery object instances, we can use the <code>this</code> keyword as we do here to refer to the selected elements within the callback function.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Hide a loading message after all the Ajax requests have stopped.</span></h4>
 <pre><code class="example">$("#loading").ajaxStop(function(){
       $(this).hide();

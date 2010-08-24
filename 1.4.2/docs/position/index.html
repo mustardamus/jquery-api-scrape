@@ -21,7 +21,7 @@
 <p>Returns an object containing the properties <code>top</code> and <code>left</code>.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Access the position of the second paragraph:</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -31,13 +31,21 @@
   div { padding: 15px;}
   p { margin-left:10px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-	&lt;div&gt;&lt;p&gt;Hello&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;
-&lt;script&gt;var p = $("p:first");
+	
+&lt;div&gt;
+  &lt;p&gt;Hello&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+
+&lt;script&gt;
+var p = $("p:first");
 var position = p.position();
-$("p:last").text( "left: " + position.left + ", top: " + position.top );&lt;/script&gt;
+$("p:last").text( "left: " + position.left + ", top: " + position.top );
+&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

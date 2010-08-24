@@ -50,7 +50,7 @@
 <p>Shorthand CSS properties (e.g. margin, background, border) are not supported. For example, if you want to retrieve the rendered margin, use: <code>$(elem).css('marginTop')</code> and <code>$(elem).css('marginRight')</code>, and so on.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">To access the background color of a clicked div.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -58,7 +58,7 @@
   &lt;style&gt;
 div { width:60px; height:60px; margin:5px; float:left; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -76,6 +76,7 @@ $("div").click(function () {
 });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -96,7 +97,7 @@ $("div").click(function () {
 <p class="arguement"><strong>propertyName</strong>A CSS property name.</p>
 <p class="arguement"><strong>value</strong>A value to set for the property.</p>
 </li>
-<li class="signature" id="css-propertyName-functionindex, value">
+<li class="signature" id="css-propertyName-functionindex-value">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.css( propertyName, function(index, value) )</h4>
 <p class="arguement"><strong>propertyName</strong>A CSS property name.</p>
@@ -118,8 +119,8 @@ $("div").click(function () {
 <p>This example sets the widths of the matched elements to incrementally larger values.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
-<div id="example-0">
+<div class="entry-examples" id="entry-examples-1">
+<div id="example-1-0">
 <h4>Example: <span class="desc">To change the color of any paragraph to red on mouseover event.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -128,7 +129,7 @@ $("div").click(function () {
   &lt;style&gt;
   p { color:blue; width:200px; font-size:14px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -141,12 +142,13 @@ $("div").click(function () {
     $(this).css("color","red");
   });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-1">
+<div id="example-1-1">
 <h4>Example: <span class="desc">To highlight a clicked word in the paragraph.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -155,7 +157,7 @@ $("div").click(function () {
   &lt;style&gt;
   p { color:blue; font-weight:bold; cursor:pointer; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -175,12 +177,13 @@ $("div").click(function () {
   });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-2">
+<div id="example-1-2">
 <h4>Example: <span class="desc">To set the color of all paragraphs to red and background to blue:</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -189,7 +192,7 @@ $("div").click(function () {
   &lt;style&gt;
   p { color:green; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -208,12 +211,13 @@ $("div").click(function () {
     $(this).css(cssObj);
   });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-3">
+<div id="example-1-3">
 <h4>Example: <span class="desc">Increase the size of a div when you click it:</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -222,7 +226,7 @@ $("div").click(function () {
   &lt;style&gt;
   div { width: 20px; height: 15px; background-color: #f33; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	
@@ -242,6 +246,7 @@ $("div").click(function () {
     });
   });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

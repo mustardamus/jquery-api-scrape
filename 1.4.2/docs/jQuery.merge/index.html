@@ -25,10 +25,10 @@
 <p>If you need the original first array, make a copy of it before calling <code>$.merge()</code>. Fortunately, <code>$.merge()</code> itself can be used for this duplication:</p>
 <pre>var newArray = $.merge([], oldArray);</pre>
 <p>This shortcut creates a new, empty array and merges the contents of oldArray into it, effectively cloning the array.</p>
-<p>The arguments should be true Javascript Array objects; use <code>$.makeArray</code> if they are not.</p>
+<p>Prior to jQuery 1.4, the arguments should be true Javascript Array objects; use <code>$.makeArray</code> if they are not.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Merges two arrays, altering the first argument.</span>
 </h4>

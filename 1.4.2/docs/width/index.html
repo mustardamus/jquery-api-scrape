@@ -42,7 +42,7 @@
 $(document).width(); // returns width of HTML document</pre>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Show various widths.  Note the values are from the iframe so might be smaller than you expected.  The yellow highlight shows the iframe body.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -53,7 +53,7 @@ $(document).width(); // returns width of HTML document</pre>
   p { width:150px; border:1px red solid; }
   div { color:red; font-weight:bold;  }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="getp"&gt;Get Paragraph Width&lt;/button&gt;
@@ -80,6 +80,7 @@ $(document).width(); // returns width of HTML document</pre>
     });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -99,7 +100,7 @@ $(document).width(); // returns width of HTML document</pre>
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.width( value )</h4>
 <p class="arguement"><strong>value</strong>An integer representing the number of pixels, or an integer along with an optional unit of measure appended (as a string).</p>
 </li>
-<li class="signature" id="width-functionindex, width">
+<li class="signature" id="width-functionindex-width">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.4.1/">1.4.1</a></span>.width( function(index, width) )</h4>
 <p class="arguement"><strong>function(index, width)</strong>A function returning the width to set. Receives the index position of the element in the set and the old width as arguments.</p>
@@ -110,7 +111,7 @@ $(document).width(); // returns width of HTML document</pre>
 <p>If no explicit unit was specified (like 'em' or '%') then "px" is concatenated to the value.</p>
 </div>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples-1"><div id="example-1-0">
 <h4><span class="desc">To set the width of each div on click to 30px plus a color change.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -119,7 +120,7 @@ $(document).width(); // returns width of HTML document</pre>
   div { width:70px; height:50px; float:left; margin:5px;
         background:red; cursor:pointer; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;&lt;/div&gt;
@@ -135,6 +136,7 @@ $(document).width(); // returns width of HTML document</pre>
              .css({cursor:"auto", "background-color":"blue"});
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

@@ -37,7 +37,7 @@
 <p>The result of this call is a red background behind items 4 and 5. Since we do not supply a selector expression, these following elements are unequivocally included as part of the object. If we had supplied one, the elements would be tested for a match before they were included.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Locate all the divs after the first and give them a class.</span>
 </h4>
@@ -50,7 +50,7 @@
         border: 2px solid black; margin: 10px; float: left; }
   div.after { border-color: red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;first&lt;/div&gt;
@@ -59,6 +59,7 @@
 
   &lt;div&gt;sibling&lt;/div&gt;
 &lt;script&gt;$("div:first").nextAll().addClass("after");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -75,7 +76,7 @@
            border: 2px solid black; margin: 10px; float: left; }
   .after { border-color: red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;p&lt;/p&gt;
@@ -90,6 +91,7 @@
 &lt;script&gt;
     $(":nth-child(1)").nextAll("p").addClass("after");
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

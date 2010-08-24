@@ -43,7 +43,7 @@ $('input:checkbox:checked').val();        // get the value from a checked checkb
 $('input:radio[name=bar]:checked').val(); // get the value from a set of radio buttons</pre>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Get the single value from a single select and an array of values from a multiple select and display their values.</span>
 </h4>
@@ -54,7 +54,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
   p { color:red; margin:4px; }
   b { color:blue; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;&lt;/p&gt;
@@ -83,6 +83,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
     displayVals();
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -98,7 +99,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 
   p { color:blue; margin:8px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;input type="text" value="some text"/&gt;
@@ -109,6 +110,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
       $("p").text(value);
     }).keyup();
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -129,7 +131,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.val( value )</h4>
 <p class="arguement"><strong>value</strong>A string of text or an array of strings to set as the value property of each matched element.</p>
 </li>
-<li class="signature" id="val-functionindex, value">
+<li class="signature" id="val-functionindex-value">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.4/">1.4</a></span>.val( function(index, value) )</h4>
 <p class="arguement"><strong>function(index, value)</strong>A function returning the value to set.</p>
@@ -145,8 +147,8 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
 <p>This example appends the string " items" to the text inputs' values.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
-<div id="example-0">
+<div class="entry-examples" id="entry-examples-1">
+<div id="example-1-0">
 <h4>Example: <span class="desc">Set the value of an input box.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -156,7 +158,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
   button { margin:4px; cursor:pointer; }
   input { margin:4px; color:blue; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;
@@ -172,12 +174,13 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
       $("input").val(text);
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-1">
+<div id="example-1-1">
 <h4>Example: <span class="desc">Set a single select and a multiple select .</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -186,7 +189,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
   &lt;style&gt;
   body { color:blue; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;select id="single"&gt;
@@ -211,6 +214,7 @@ $('input:radio[name=bar]:checked').val(); // get the value from a set of radio b
     $("input").val(["check1","check2", "radio1" ]);
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

@@ -47,7 +47,7 @@
 <p>The result of this call is a red background behind items A, B, and C. Since we do not supply a selector expression, all of the children are part of the returned jQuery object. If we had supplied one, only the matching items among these three would be included.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Find all children of the clicked element.</span>
 </h4>
@@ -70,7 +70,7 @@
   b { border:1px solid transparent; }
   button { border:1px solid transparent; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div id="container"&gt;
@@ -110,6 +110,7 @@
       return false;
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -126,7 +127,7 @@
   span { color:blue; }
   p { margin:5px 0; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello (this is a paragraph)&lt;/p&gt;
@@ -136,6 +137,7 @@
 
   &lt;div&gt;And One Last &lt;span&gt;Time&lt;/span&gt; (most text directly in a div)&lt;/div&gt;
 &lt;script&gt;$("div").children().css("border-bottom", "3px double red");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -152,7 +154,7 @@
   body { font-size:16px; font-weight:bolder; }
   p { margin:5px 0; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;
@@ -163,6 +165,7 @@
     &lt;p&gt;And One Last Time&lt;/p&gt;
   &lt;/div&gt;
 &lt;script&gt;$("div").children(".selected").css("color", "blue");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

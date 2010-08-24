@@ -38,8 +38,10 @@
 <p class="image four-across"> 
 <img src="/images/0042_06_17.png" alt=""><img src="/images/0042_06_18.png" alt=""><img src="/images/0042_06_19.png" alt=""><img src="/images/0042_06_20.png" alt=""></p>
 </div>
+<h3 id="notes-0">Additional Notes:</h3>
+<div class="longdesc"><ul><li>All jQuery effects, including <code>.slideDown()</code>, can be turned off globally by setting  <code>jQuery.fx.off = true</code>. For more information, see <a href="http://api.jquery.com/jquery.fx.off">jQuery.fx.off</a>.</li></ul></div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Animates all divs to slide down and show themselves over 600 milliseconds.</span>
 </h4>
@@ -50,7 +52,7 @@
 div { background:#de9a44; margin:3px; width:80px; 
 height:40px; display:none; float:left; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	Click me!
@@ -67,6 +69,7 @@ $("div").hide();
 });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -85,7 +88,7 @@ border:2px outset black; font-weight:bolder; }
 input { display:none; width:120px; float:left; 
 margin:10px; }
 &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;div&gt;Push!&lt;/div&gt;
@@ -106,6 +109,7 @@ $("div").css("visibility", "hidden");
 });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

@@ -38,7 +38,7 @@
 <p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
 </li></ul>
 <h3>Example:</h3>
-<div id="entry-examples" class="entry-examples"><div id="example-0">
+<div class="entry-examples" id="entry-examples"><div id="example-0">
 <h4><span class="desc">Show the length of the queue.</span></h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -48,7 +48,7 @@
         background:green; display:none; }
   div.newcolor { background:blue; }
   span { color:red; }  &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="show"&gt;Show Length of Queue&lt;/button&gt;
@@ -69,6 +69,7 @@
       $("div").slideUp("normal", runIt);
     }
     runIt();&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -89,7 +90,7 @@
 <p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
 <p class="arguement"><strong>newQueue</strong>An array of functions to replace the current queue contents.</p>
 </li>
-<li class="signature" id="queue-queueName-callback next ">
+<li class="signature" id="queue-queueName-callbacknext">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>.queue( [ queueName ], callback( next ) )</h4>
 <p class="arguement"><strong>queueName</strong>A string containing the name of the queue. Defaults to <code>fx</code>, the standard effects queue.</p>
@@ -119,8 +120,8 @@ $('#foo').queue(function() {
 });</pre>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
-<div id="example-0">
+<div class="entry-examples" id="entry-examples-1">
+<div id="example-1-0">
 <h4>Example: <span class="desc">Queue a custom function.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -132,7 +133,7 @@ $('#foo').queue(function() {
         background:green; display:none; }
   div.newcolor { background:blue; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	Click here...
@@ -151,12 +152,13 @@ $('#foo').queue(function() {
       });
       $("div").slideUp();
     });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
 <div class="demo code-demo"></div>
 </div>
-<div id="example-1">
+<div id="example-1-1">
 <h4>Example: <span class="desc">Set a queue array to delete the queue.</span>
 </h4>
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
@@ -168,7 +170,7 @@ $('#foo').queue(function() {
         background:green; display:none; }
   div.newcolor { background:blue; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button id="start"&gt;Start&lt;/button&gt;
@@ -192,6 +194,7 @@ $('#foo').queue(function() {
       $("div").queue("fx", []);
       $("div").stop();
     });&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

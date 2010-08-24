@@ -58,12 +58,12 @@
 &lt;/div&gt;</pre>
 <p>From this example, we can see that the selected element replaces the target by being moved from its old location, not by being cloned.</p>
 <p>The <code>.replaceWith()</code> method, like most jQuery methods, returns the jQuery object so that other methods can be chained onto it. However, it must be noted that the <emphasis role="italics">original</emphasis> jQuery object is returned. This object refers to the element that has been removed from the DOM, not the new element that has replaced it.</p>
-<p>In jQuery 1.4 replaceWith, before, and after will also work on disconnected DOM nodes. For example if you were to do:</p>
-<pre>$("<div></div>").replaceWith("<p></p>");</pre>
-<p>Then you would end up with a jQuery set that contains only a paragraph.</p>
+<p>In jQuery 1.4 <code>.replaceWith()</code>, <code>.before()</code>, and <code>.after()</code> can also work on disconnected DOM nodes. For example, with the following code:</p>
+<pre>$("&lt;div/&gt;").replaceWith("&lt;p&gt;&lt;/p&gt;");</pre>
+<p>The <code>.replaceWith()</code> method returns a jQuery set containing only a paragraph.</p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">On click, replace the button with a div containing the same word.</span>
 </h4>
@@ -75,7 +75,7 @@
   div { color:red; border:2px solid blue; width:200px; 
         margin:3px; text-align:center; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;button&gt;First&lt;/button&gt;
@@ -88,6 +88,7 @@
       $(this).replaceWith("&lt;div&gt;" + $(this).text() + "&lt;/div&gt;");
     });
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -99,7 +100,7 @@
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -107,6 +108,7 @@
 
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").replaceWith("&lt;b&gt;Paragraph. &lt;/b&gt;");&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -121,7 +123,7 @@
   &lt;style&gt;
   div { border:2px solid blue; margin:3px; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -129,6 +131,7 @@
   &lt;p&gt;cruel&lt;/p&gt;
   &lt;p&gt;World&lt;/p&gt;
 &lt;script&gt;$("p").replaceWith(document.createElement("div"));&lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -144,7 +147,7 @@
   div { border:2px solid blue; color:red; margin:3px; }
   p { border:2px solid red; color:blue; margin:3px; cursor:pointer; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	&lt;p&gt;Hello&lt;/p&gt;
@@ -158,6 +161,7 @@
     });
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>

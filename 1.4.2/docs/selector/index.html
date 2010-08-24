@@ -21,7 +21,7 @@
 <p>The <code>.live()</code> method for binding event handlers uses this property to determine how to perform its searches. Plug-ins which perform similar tasks may also find the property useful. This property contains a string representing the matched set of elements, but if DOM traversal methods have been called on the object, the string may not be a valid jQuery selector expression. For this reason, the value of <code>.selector</code> is generally most useful immediately following the original creation of the object. Consequently, the <code>.live()</code> method should only be used in this scenario. </p>
 </div>
 <h3>Examples:</h3>
-<div id="entry-examples" class="entry-examples">
+<div class="entry-examples" id="entry-examples">
 <div id="example-0">
 <h4>Example: <span class="desc">Determine the selector used.</span>
 </h4>
@@ -34,7 +34,7 @@
         background:green; }
   span { color:red; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	Some selectors:&lt;ul&gt;&lt;/ul&gt;
@@ -44,6 +44,7 @@
   .append("&lt;li&gt;" + $("div#foo ul:not([class])").selector + "&lt;/li&gt;");
 
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
@@ -55,7 +56,7 @@
 <pre><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
 	Some selectors:&lt;ul&gt;&lt;/ul&gt;
@@ -64,6 +65,7 @@
    $('&lt;div&gt;' + $('ul li.foo').selector + '&lt;/div&gt;').appendTo('body');  // "ul li.foo"
    $('&lt;div&gt;' + $('ul').find('li').filter('.foo').selector + '&lt;/div&gt;').appendTo('body'); // "ul li.filter(.foo)"
 &lt;/script&gt;
+
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 <h4>Demo:</h4>
