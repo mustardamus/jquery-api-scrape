@@ -8,7 +8,7 @@ require "mechanize"
 html_start = "<!DOCTYPE html>\n<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>"
 html_end = "</body></html>"
 
-agent = WWW::Mechanize.new
+agent = Mechanize.new
 mainpage = agent.get("http://api.jquery.com/")
 
 version = mainpage.search("#categories > ul > li:last > ul > li:last a")[0].text
