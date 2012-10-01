@@ -40,11 +40,10 @@
 <p>If only one argument is supplied to <code>$.extend()</code>, this means the target argument was omitted. In this case, the jQuery object itself is assumed to be the target. By doing this, we can add new functions to the jQuery namespace.  This can be useful for plugin authors wishing to add new methods to JQuery.</p>
 <p>Keep in mind that the target object (first argument) will be modified, and will also be returned from <code>$.extend()</code>. If, however, we want to preserve both of the original objects, we can do so by passing an empty object as the target:</p>
 <pre>var object = $.extend({}, object1, object2);</pre>
-<p>The merge performed by <code>$.extend()</code> is not recursive by default; if a property of the first object is itself an object or array, it will be completely overwritten by a property with the same key in the second object. The values are not merged. This can be seen in the example below by examining the value of banana. However, by passing <code>true</code> for the first function argument, objects will be recursively merged.</p>
-<p>Undefined properties are not copied. However, properties inherited from the object's prototype <em>will</em> be copied over. For performance reasons, properties that have values of built-in JavaScript types such as Date or RegExp are not re-constructed, and will appear as plain Objects in the resulting object or array.</p>
-<blockquote>
-<p><strong>Note:</strong> When performing a deep extend, Object and Array are extended, however primitive types such string, boolean and number are not. For specific needs that fall outside of this behaviour, it is recommended to write a custom extend method as this will be significantly faster from a performance perspective. </p>
-</blockquote>
+<p>The merge performed by <code>$.extend()</code> is not recursive by default; if a property of the first object is itself an object or array, it will be completely overwritten by a property with the same key in the second object. The values are not merged. This can be seen in the example below by examining the value of banana. However, by passing <code>true</code> for the first function argument, objects will be recursively merged. (Passing <code>false</code> for the first argument is not supported.)</p>
+<p>Undefined properties are not copied. However, properties inherited from the object's prototype <em>will</em> be copied over. Properties that are an object constructed via <code>new MyCustomObject(args)</code>, or built-in JavaScript types such as Date or RegExp, are not re-constructed and will appear as plain Objects in the resulting object or array.</p>
+<p>On a <code>deep</code> extend, Object and Array are extended, but object wrappers on primitive types such as String, Boolean, and Number are not.</p>
+<p>For needs that fall outside of this behavior, write a custom extend method instead. </p>
 </div>
 <h3>Examples:</h3>
 <div class="entry-examples" id="entry-examples">
@@ -54,7 +53,7 @@
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
@@ -74,7 +73,7 @@ var object2 = {
 /* merge object2 into object1 */
 $.extend(object1, object2);
 
-var printObj = function(obj) {
+var printObj = typeof JSON != "undefined" ? JSON.stringify : function(obj) {
   var arr = [];
   $.each(obj, function(key, val) {
     var next = key + ": ";
@@ -98,7 +97,7 @@ $("#log").append( printObj(object1) );
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
@@ -118,7 +117,7 @@ var object2 = {
 /* merge object2 into object1, recursively */
 $.extend(true, object1, object2);
 
-var printObj = function(obj) {
+var printObj = typeof JSON != "undefined" ? JSON.stringify : function(obj) {
   var arr = [];
   $.each(obj, function(key, val) {
     var next = key + ": ";
@@ -142,7 +141,7 @@ $("#log").append( printObj(object1) );
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
@@ -155,7 +154,7 @@ var options = { validate: true, name: "bar" };
 /* merge defaults and options, without modifying defaults */
 var settings = $.extend({}, defaults, options);
 
-var printObj = function(obj) {
+var printObj = typeof JSON != "undefined" ? JSON.stringify : function(obj) {
   var arr = [];
   $.each(obj, function(key, val) {
     var next = key + ": ";
@@ -166,8 +165,9 @@ var printObj = function(obj) {
 };
 
 
-$("#log").append( "&lt;div&gt;&lt;b&gt;settings -- &lt;/b&gt;" + printObj(settings) + "&lt;/div&gt;" );
+$("#log").append( "&lt;div&gt;&lt;b&gt;defaults -- &lt;/b&gt;" + printObj(defaults) + "&lt;/div&gt;" );
 $("#log").append( "&lt;div&gt;&lt;b&gt;options -- &lt;/b&gt;" + printObj(options) + "&lt;/div&gt;" );
+$("#log").append( "&lt;div&gt;&lt;b&gt;settings -- &lt;/b&gt;" + printObj(settings) + "&lt;/div&gt;" );
 
 &lt;/script&gt;
 

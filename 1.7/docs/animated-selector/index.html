@@ -19,6 +19,7 @@
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.2/">1.2</a></span>jQuery(':animated')</h4>
 <p class="desc"><strong>Description: </strong>Select all elements that are in the progress of an animation at the time the selector is run.</p>
+<div class="longdesc"><p><strong>Note:</strong> If you use a custom jQuery build <em>without the effects module</em>, the <code>:animated</code> selector will throw an error. </p></div>
 <h3 id="notes-0">Additional Notes:</h3>
 <div class="longdesc"><ul><li>Because <code>:animated</code> is a jQuery extension and not part of the CSS specification, queries using <code>:animated</code> cannot take advantage of the performance boost provided by the native DOM <code>querySelectorAll()</code> method. To achieve the best performance when using <code>:animated</code> to select elements, first select the elements using a pure CSS selector, then use <a href="http://api.jquery.com/filter/"><code>.filter(":animated")</code></a>.</li></ul></div>
 <h3>Example:</h3>
@@ -31,7 +32,7 @@
   div { background:yellow; border:1px solid #AAA; width:80px; height:80px; margin:0 5px; float:left; }
   div.colored { background:green; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;button id="run"&gt;Run&lt;/button&gt;

@@ -32,7 +32,7 @@ mainpage.search("#categories > ul > li > a").each do |mainlink|
     
     subpage.search("#method-list > li").each do |method|
       method_a = method.search("h2 a")[0]
-      method_name = method_a.text.gsub(/“/, '"').gsub(/”/, '"')
+      method_name = method_a.text#.gsub(/“/, '"').gsub(/”/, '"')
       method_link = method_a["href"]
       method_desc = method.search(".desc")[0].text
       method_fold = method_link[22..method_link.length-2]

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang='en'><head><meta http-equiv='content-type' content='text/html; charset=UTF-8' /></head><body>
+<div class="entry-content">
+        <div class="entry-title roundTop">
+          
+          <h1 class="jq-clearfix">callbacks.fire()</h1>
+          <div class="entry-meta jq-clearfix">
+                        Categories:
+            <span class="category"><a href="http://api.jquery.com/category/callbacks-object/" title="View all posts in Callbacks Object">Callbacks Object</a></span>
+  
+
+          </div>
+
+</div>
+<div id="callbacks-fire1" class="entry method">
+<h2 class="jq-clearfix roundTop section-title">
+<span class="name">callbacks.fire( arguments )</span> <span class="returns">Returns: <a class="return" href="http://api.jquery.com/Types/#Callbacks">Callbacks</a></span>
+</h2>
+<div class="jq-box roundBottom entry-details">
+<p class="desc"><strong>Description: </strong>Call all of the callbacks with the given arguments</p>
+<ul class="signatures"><li class="signature" id="callbacks-fire-arguments">
+<h4 class="name">
+<span class="versionAdded">version added: <a href="/category/version/1.7/">1.7</a></span>callbacks.fire( arguments )</h4>
+<p class="arguement"><strong>arguments</strong>The argument or list of arguments to pass back to the callback list.</p>
+</li></ul>
+<div class="longdesc">
+<h2 id="example-1">Example</h2>
+<p>Use <code>callbacks.fire()</code> to invoke the callbacks in a list with any arguments that have been passed:</p>
+<pre>
+// a sample logging function to be added to a callbacks list
+var foo = function( value ){
+    console.log( 'foo:' + value );
+}
+
+var callbacks = $.Callbacks();
+
+// add the function 'foo' to the list
+callbacks.add( foo );
+
+// fire the items on the list
+callbacks.fire( 'hello' ); // outputs: 'foo: hello'
+callbacks.fire( 'world '); // outputs: 'foo: world'
+
+// add another function to the list
+var bar = function( value ){
+    console.log( 'bar:' + value );
+} 
+
+// add this function to the list
+callbacks.add( bar );
+
+// fire the items on the list again
+callbacks.fire( 'hello again' );
+// outputs:
+// 'foo: hello again'
+// 'bar: hello again'
+</pre>
+</div>
+</div>
+</div>
+
+        </div>
+
+</body></html>

@@ -21,7 +21,7 @@
 <ul class="signatures"><li class="signature" id="removeAttr-attributeName">
 <h4 class="name">
 <span class="versionAdded">version added: <a href="/category/version/1.0/">1.0</a></span>.removeAttr( attributeName )</h4>
-<p class="arguement"><strong>attributeName</strong>An attribute to remove.</p>
+<p class="arguement"><strong>attributeName</strong>An attribute to remove; as of version 1.7, it can be a space-separated list of attributes.</p>
 </li></ul>
 <div class="longdesc">
 <p>The <code>.removeAttr()</code> method uses the JavaScript <code>removeAttribute()</code> function, but it has the advantage of being able to be called directly on a jQuery object and it accounts for different attribute naming across browsers.</p>
@@ -30,8 +30,6 @@
 $element.prop("onclick", null);
 console.log("onclick property: ", $element[0].onclick);
 </pre>
-<p>The behavior of <code>.removeAttr()</code> may be updated to better handle this in the future. For the time being, however, setting <code>.prop("onclick", null)</code> should be considered the standard cross-browser solution.</p>
-<p></p>
 </div>
 <h3>Example:</h3>
 <div class="entry-examples" id="entry-examples"><div id="example-0">
@@ -39,7 +37,7 @@ console.log("onclick property: ", $element[0].onclick);
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;button&gt;Enable&lt;/button&gt;

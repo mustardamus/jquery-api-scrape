@@ -46,7 +46,7 @@ $.get("test.php").done(function() {
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
@@ -54,7 +54,7 @@ $.get("test.php").done(function() {
  &lt;p&gt;Ready...&lt;/p&gt;
 
 &lt;script&gt;
-// 3 functions to call when the Deferred object is resolved
+/* 3 functions to call when the Deferred object is resolved */
 function fn1() {
   $("p").append(" 1 ");
 }
@@ -65,19 +65,19 @@ function fn3(n) {
   $("p").append(n + " 3 " + n);
 }
 
-// create a deferred object
+/* create a deferred object */
 var dfd = $.Deferred();
 
-// add handlers to be called when dfd is resolved
+/* add handlers to be called when dfd is resolved */
 dfd
-// .done() can take any number of functions or arrays of functions
+/* .done() can take any number of functions or arrays of functions */
 .done( [fn1, fn2], fn3, [fn2, fn1] )
-// we can chain done methods, too
+/* we can chain done methods, too */
 .done(function(n) {
   $("p").append(n + " we're done.");
 });
 
-// resolve the Deferred object when the button is clicked
+/* resolve the Deferred object when the button is clicked */
 $("button").bind("click", function() {
   dfd.resolve("and");
 });

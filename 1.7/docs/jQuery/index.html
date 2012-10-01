@@ -85,6 +85,7 @@
 <div class="longdesc">
 <p>In the first formulation listed above,  <code>jQuery()</code> — which can also be written as <code>$()</code> — searches through the DOM for any elements that match the provided selector and creates a new jQuery object that references these elements:</p>
 <pre>$('div.foo');</pre>
+<p>If no elements match the provided selector, the new jQuery object is "empty"; that is, it contains no elements and has <code><a href="http://api.jquery.com/length/">.length</a></code> property of 0.</p>
 <h4 id="selector-context">Selector Context</h4>
 <p>By default, selectors perform their searches within the DOM starting at the document root. However, an alternate context can be given for the search by using the optional second parameter to the  <code>$()</code> function. For example, to do a search within an event handler, the search can be restricted like so:</p>
 <pre>
@@ -113,7 +114,7 @@ $.post('url.xml', function(data) {
 <h4 id="returning-empty-set">Returning an Empty Set</h4>
 <p>As of jQuery 1.4, calling the <code>jQuery()</code> method with <em>no arguments</em> returns an empty jQuery set (with a <code><a href="http://api.jquery.com/length/">.length</a></code> property of 0). In previous versions of jQuery, this would return a set containing the document node.</p>
 <h4 id="working-with-plain-objects">Working With Plain Objects</h4>
-<p>At present, the only operations supported on plain JavaScript objects wrapped in jQuery are: <code>.data()</code>,<code>.prop()</code>,<code>.bind()</code>, <code>.unbind()</code>,<code>.trigger()</code> and <code>.triggerHandler()</code>. The use of <code>.data()</code> (or any method requiring <code>.data()</code>) on a plain object will result in a new property on the object called jQuery{randomNumber} (eg. jQuery123456789).</p>
+<p>At present, the only operations supported on plain JavaScript objects wrapped in jQuery are: <code>.data()</code>,<code>.prop()</code>,<code>.bind()</code>, <code>.unbind()</code>, <code>.trigger()</code> and <code>.triggerHandler()</code>. The use of <code>.data()</code> (or any method requiring <code>.data()</code>) on a plain object will result in a new property on the object called jQuery{randomNumber} (eg. jQuery123456789).</p>
 <pre>
 // define a plain object
 var foo = {foo:'bar', hello:'world'};
@@ -152,7 +153,7 @@ $foo.triggerHandler('eventName'); // also logs 'eventName was called'
 <pre class="prettyprint"><code class="example demo-code">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;p&gt;one&lt;/p&gt; &lt;div&gt;&lt;p&gt;two&lt;/p&gt;&lt;/div&gt; &lt;p&gt;three&lt;/p&gt;
@@ -212,20 +213,18 @@ $foo.triggerHandler('eventName'); // also logs 'eventName was called'
 <h4 id="creating-new-elements">Creating New Elements</h4>
 <p>If a string is passed as the parameter to <code>$()</code>, jQuery examines the string to see if it looks like HTML (i.e., it has <code>&lt;tag ... &gt;</code> somewhere within the string). If not, the string is interpreted as a selector expression, as explained above. But if the string appears to be an HTML snippet, jQuery attempts to create new DOM elements as described by the HTML. Then a jQuery object is created and returned that refers to these elements. You can perform any of the usual jQuery methods on this object:</p>
 <pre>$('&lt;p id="test"&gt;My &lt;em&gt;new&lt;/em&gt; text&lt;/p&gt;').appendTo('body');</pre>
-<p>If the HTML is more complex than a single tag without attributes, as it is in the above example, the actual creation of the elements is handled by the browser's <code>innerHTML</code> mechanism. In most cases, jQuery creates a new &lt;div&gt; element and sets the innerHTML property of the element to the HTML snippet that was passed in. When the parameter has a single tag, such as  <code>$('&lt;img /&gt;')</code> or  <code>$('&lt;a&gt;&lt;/a&gt;')</code>, jQuery creates the element using the native JavaScript <code>createElement()</code> function.</p>
+<p>If the HTML is more complex than a single tag without attributes, as it is in the above example, the actual creation of the elements is handled by the browser's <code>innerHTML</code> mechanism. In most cases, jQuery creates a new &lt;div&gt; element and sets the innerHTML property of the element to the HTML snippet that was passed in. When the parameter has a single tag (with optional closing tag or quick-closing) — <code>$('&lt;img /&gt;')</code> or <code>$('&lt;img&gt;')</code>, <code>$('&lt;a&gt;&lt;/a&gt;')</code> or <code>$('&lt;a&gt;')</code> — jQuery creates the element using the native JavaScript <code>createElement()</code> function.</p>
 <p>When passing in complex HTML, some browsers may not generate a DOM that exactly replicates the HTML source provided. As mentioned, we use the browser's <code>.innerHTML</code> property to parse the passed HTML and insert it into the current document. During this process, some  browsers filter out certain elements such as  <code>&lt;html&gt;</code>,  <code>&lt;title&gt;</code>, or  <code>&lt;head&gt;</code> elements. As a result, the  elements inserted may not be representative of the original string  passed.</p>
-<p> Filtering isn't however just limited to these tags. For example, Internet Explorer prior to version 8 will also convert all <code>href</code> properties on links to absolute URLs, and Internet Explorer prior to version 9 will not correctly handle HTML5 elements without the addition of a separate <a href="http://code.google.com/p/html5shiv/">compatibility layer</a>.</p>
+<p> Filtering isn't, however, limited to these tags. For example, Internet Explorer prior to version 8 will also convert all <code>href</code> properties on links to absolute URLs, and Internet Explorer prior to version 9 will not correctly handle HTML5 elements without the addition of a separate <a href="http://code.google.com/p/html5shiv/">compatibility layer</a>.</p>
 <p>To ensure cross-platform compatibility, the snippet must be well-formed. Tags that can contain other elements should be paired with a closing tag:</p>
 <pre>$('&lt;a href="http://jquery.com"&gt;&lt;/a&gt;');</pre>
-<p>Alternatively, jQuery allows XML-like tag syntax (with or without a space before the slash):</p>
-<pre>$('&lt;a/&gt;');</pre>
 <p>Tags that cannot contain elements may be quick-closed or not:</p>
 <pre>$('&lt;img /&gt;');
 $('&lt;input&gt;');
 </pre>
 <p>When passing HTML to <code>jQuery()</code>, please also note that text nodes are not treated as DOM elements. With the exception of a few methods (such as <code>.content()</code>), they are generally otherwise ignored or removed. E.g:</p>
 <pre>
-var el = $('1&lt;br/&gt;2&lt;br/&gt;3'); // returns [&lt;br&gt;, "2", &lt;br&gt;] 
+var el = $('1&lt;br/&gt;2&lt;br/&gt;3'); // returns [&lt;br&gt;, "2", &lt;br&gt;]
 el  = $('1&lt;br/&gt;2&lt;br/&gt;3 &gt;'); // returns [&lt;br&gt;, "2", &lt;br&gt;, "3 &amp;gt;"]
 </pre>
 <p>This behaviour is expected. </p>

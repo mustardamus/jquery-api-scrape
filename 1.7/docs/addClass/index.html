@@ -38,8 +38,8 @@
 <pre>$("p").removeClass("myClass noClass").addClass("yourClass");</pre>
 <p>Here, the <code>myClass</code> and <code>noClass</code> classes are removed from all paragraphs, while <code>yourClass</code> is added.</p>
 <p>As of jQuery 1.4, the <code>.addClass()</code> method's argument can receive a function.</p>
-<pre>$("ul li:last").addClass(function() {
-  return "item-" + $(this).index();
+<pre>$("ul li:last").addClass(function(index) {
+  return "item-" + index;
 });</pre>
 <p>Given an unordered list with five <code>&lt;li&gt;</code> elements, this example adds the class "item-4" to the last <code>&lt;li&gt;</code>.</p>
 </div>
@@ -56,7 +56,7 @@
   .selected { color:blue; }
   .highlight { background:yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
@@ -84,7 +84,7 @@
   .selected { color:red; }
   .highlight { background:yellow; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   &lt;p&gt;Hello&lt;/p&gt;
@@ -110,7 +110,7 @@
   .red { background: red; }
   .red.green { background: green; }
   &lt;/style&gt;
-  &lt;script src="http://code.jquery.com/jquery-1.7rc2.js"&gt;&lt;/script&gt;
+  &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
   
